@@ -1,0 +1,135 @@
+.dashboard-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.appliances-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.appliance-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.appliance-item span {
+    font-weight: bold;
+    color: #333;
+}
+
+.appliance-item button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.appliance-item button:hover {
+    background-color: #218838;
+}
+
+.suggestion-card-dashboard {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+    border-left: 5px solid #007bff;
+}
+
+.suggestion-card-dashboard h3 {
+    margin-top: 0;
+    color: #0a4f72;
+}
+
+.suggestion-text {
+    font-style: italic;
+    color: #555;
+    margin-top: 15px;
+}
+
+/* --- Styles for the Add Appliance Form --- */
+
+.add-appliance-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.add-appliance-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.add-appliance-form {
+    display: flex;
+    gap: 10px;
+}
+
+.add-appliance-form select {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-appliance-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-appliance-form button:hover {
+    background-color: #0056b3;
+}
+
+.appliances-list h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- NEW STYLES FOR THE REMOVE BUTTON --- */
+
+.appliance-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.remove-button {
+    background-color: #dc3545; /* Red for danger/remove */
+    color: white;
+}
+
+.remove-button:hover {
+    background-color: #c82333;
+}
+
