@@ -1,0 +1,25 @@
+brand,model,appliance_type,avg_power_consumption_kwh,avg_water_consumption_liters,has_delay_start,has_eco_mode
+Bosch,800 Series Pro,Dishwasher,1.3,8.5,True,True
+Siemens,iQ700 SmartWash,Dishwasher,1.4,9.0,True,True
+LG,QuadWash SteamClean,Dishwasher,1.5,9.5,True,True
+Samsung,AI EcoBubble,Washing Machine,1.9,55,True,True
+LG,TurboWash 360 AI,Washing Machine,1.8,50,True,True
+IFB,Senator Pro,Wasting Machine,2.0,60,True,False
+Siemens,iQ700 StudioLine Oven,Oven,2.9, ,True,True
+Bosch,Series 8 Pro,Oven,2.8, ,True,True
+IFB,34BC1 Convection,Oven,2.5, ,True,False
+LG,Dual Inverter 1.5 Ton,Air Conditioner,1.4, ,False,True
+Daikin,5-Star Smart AC,Air Conditioner,1.3, ,False,True
+Voltas,Adjustable Inverter,Air Conditioner,1.5, ,False,True
+AO Smith,Pro-Planet 25L,Water Heater,2.0, ,False,True
+Racold,Omnis Wi-Fi Pro,Water Heater,2.1, ,False,True
+Bajaj,New Shakti Neo,Water Heater,1.9, ,False,False
+Samsung,Family Hub 2.0,Refrigerator,3.5, ,False,True
+LG,InstaView Side-by-Side,Refrigerator,3.2, ,False,True
+Whirlpool,IntelliFresh Pro+,Refrigerator,3.0, ,False,False
+Sony,Bravia X90L 55",TV,0.2, ,False,True
+Samsung,The Frame 2024 55",TV,0.22, ,False,True
+LG,C3 OLED evo 55",TV,0.18, ,False,False
+Samsung,Pro-Convection 28L,Microwave Oven,2.1, ,False,True
+LG,Charcoal Healthy Ovens,Microwave Oven,2.2, ,False,True
+IFB,30L Convection Pro,Microwave Oven,2
