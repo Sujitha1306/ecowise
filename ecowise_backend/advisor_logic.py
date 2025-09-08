@@ -14,8 +14,8 @@ APPLIANCE_CYCLE_LENGTHS = {
     'Water Heater': 3,
     'Refrigerator': 24,
     'TV': 4,
-    'Microwave Oven': 1, # Added from your dataset
-    'EV Charger': 6,     # Added from your dataset
+    'Microwave Oven': 1,
+    'EV Charger': 6,
     'Default': 1
 }
 
@@ -35,18 +35,16 @@ def find_cheapest_window(forecast, window_size):
         return 0
 
     best_start_hour_numpy = np.argmin(window_sums)
-    
-    # --- THIS IS THE FINAL FIX ---
-    # Convert the special NumPy integer into a standard Python integer
-    # before returning it, which prevents the TypeError.
     return int(best_start_hour_numpy)
 
 def generate_suggestion(user, appliance, forecast):
     """
-    Analyzes an appliance-specific forecast to generate a personalized, time-window-based suggestion.
+    Analyzes an appliance-specific forecast and returns a dictionary
+    containing the suggestion text and the potential savings.
     """
     if not forecast:
-        return "Could not generate a suggestion due to a forecast error."
+        # Return a dictionary even in case of an error
+        return {'text': "Could not generate a suggestion due to a forecast error.", 'savings': 0.0}
 
     appliance_type = appliance.appliance_type
     cycle_length = APPLIANCE_CYCLE_LENGTHS.get(appliance_type, APPLIANCE_CYCLE_LENGTHS['Default'])
@@ -63,17 +61,22 @@ def generate_suggestion(user, appliance, forecast):
     formatted_savings = f"{savings:.2f}"
 
     if cycle_length > 1:
-        suggestion = (
+        suggestion_text = (
             f"Hi {user.username}, your {appliance.brand} {appliance.model} runs for about {cycle_length} hours. "
             f"For the best energy savings, start its next cycle around {formatted_time}. "
             f"This simple change can save you ~₹{formatted_savings} on this run."
         )
     else:
-        suggestion = (
+        suggestion_text = (
             f"Hi {user.username}, for your {appliance.brand} {appliance.model}, "
             f"the cheapest time to use it in the next 24 hours is around {formatted_time}. "
             f"This can save you ~₹{formatted_savings} and helps balance the grid."
         )
 
-    return suggestion
+    # --- THIS IS THE KEY CHANGE ---
+    # Return a dictionary with both the text and the raw savings number.
+    return {
+        'text': suggestion_text,
+        'savings': round(savings, 2)
+    }
 
